@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://${MONGODB_USERNAME:root}:${MONGODB_PASSWORD:example}@${MONGODB_HOST:localhost}:${MONGODB_PORT:27017}/${MONGODB_DATABASE:hexagonal}?authSource=${MONGODB_AUTH_DB:admin}
+
+samplehexagonal:
+  client:
+    address:
+      url: ${ADDRESS_URL:http://localhost:8082/addresses}
